@@ -69,7 +69,7 @@ io.on('connection',(socket)=>{
 app.get('/checkrooms',(req,res)=>{
       
        let {roomname}=req.body 
-       let flag=true
+       let flag=false
        for(let i in rooms){
             if(i==roomname){
                 flag=true
