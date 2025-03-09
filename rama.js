@@ -154,12 +154,12 @@ app.post('/createroom',async (req,res)=>{
 app.post('/code_run', async (req, res) => {
   const { code, lang } = req.body;
   console.log(lang)
-  // Map languages to Piston's language IDs
+
   const langMap = {
     python: 'python3',
     javascript: 'javascript',
     cpp: 'cpp',
-    // Add more language mappings as needed
+   
   };
 
   const language = langMap[lang];
