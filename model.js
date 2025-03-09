@@ -1,5 +1,5 @@
 const mongoose=require('mongoose') 
-
+require('dotenv').config();
 mongoose.connect(process.env.MONGO_URL) 
 
 const data_scheema=mongoose.Schema({

@@ -5,7 +5,7 @@ const { Server } = require('socket.io');
 const app = express();
 const { handleSocketConnections } = require('./socket'); 
 const routes = require('./routes'); 
-
+require('dotenv').config();
 app.use(express.json());
 app.use(cors({
     origin: '*',
