@@ -29,7 +29,7 @@ handleSocketConnections(io);
 
 
 app.use(routes);
-const port=process.env.PORT
+const port=process.env.PORT||5000
 
 server.listen(port, () => {
     console.log('hey its running man');
