@@ -20,7 +20,7 @@ function handleSocketConnections(io) {
         });
 
         socket.on('change', ({ roomname, code, lang }) => {
-            io.to(roomname).emit('code', { code, lang });
+            socket.broadcast.to(roomname).emit('code', { code, lang });
         });
 
         socket.on('disconnect_', async ({ roomname, username, role }) => {
