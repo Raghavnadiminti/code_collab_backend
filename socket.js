@@ -19,9 +19,13 @@ function handleSocketConnections(io) {
             }
         });
 
-        socket.on('change', ({ roomname, code, lang }) => {
-            socket.broadcast.to(roomname).emit('code', { code, lang });
+        socket.on('change', ({ roomname, code, lang,user }) => {
+            socket.broadcast.to(roomname).emit('code', { code, lang,user});
+            socket.broadcast.to(roomname).emit('lock',{username:user})
         });
+        socket.on('unlock_',({roomname,username})=>{
+            socket.broadcast.to(roomname).emit('unlock',{username:username})
+        })
 
         socket.on('disconnect_', async ({ roomname, username, role }) => {
             if (role === 0) {
