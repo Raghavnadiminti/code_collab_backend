@@ -7,7 +7,12 @@ const data_scheema=mongoose.Schema({
     members:{type:[String],default:true},
     language:{type:String,default:true},
     roomCode:{type:String,required:true},
-    host:{type:String,required:true}
+    host:{type:String,required:true},
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        expires: 86400 
+      }
     
 })
 
