@@ -21,7 +21,7 @@ function handleSocketConnections(io) {
 
         socket.on('change', ({ roomname, code, lang,user }) => {
             socket.broadcast.to(roomname).emit('code', { code,lang,user});
-            console.log("lo ck",user) 
+            console.log("lock",user) 
             socket.broadcast.to(roomname).emit('lock',{username:user})
         });
         socket.on('unlock_',({roomname,username})=>{
