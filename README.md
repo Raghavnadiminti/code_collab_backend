@@ -10,6 +10,7 @@ A real-time collaborative code editor built using React, Node.js, MongoDB, and S
 - **Locking/Unlocking feature**: Only one person can edit at a time, preventing editing conflicts.
 - **Clean and modern UI**: A user-friendly interface with modern styling for enhanced usability.
 - **Real-time syncing**: Changes are synced instantly using Socket.IO, providing a seamless collaboration experience.
+- there are worries of glitiching when people type at a time i managed it by locking editor for other and unlock for all for 20sec of no activity
 
 ## Tech Stack
 
